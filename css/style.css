@@ -1,0 +1,148 @@
+/*Подключение шрифтов*/
+/*@font-face {*/
+/*    font-family: 'Roboto';*/
+/*    font-style: normal;*/
+/*    font-weight: 300;*/
+/*    src: url('../fonts/Roboto/Roboto-Light.ttf') format('ttf');*/
+/*}*/
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/Roboto/Roboto-Medium.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Roboto/Roboto-Bold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Pulsar';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Pulsar Regular'), local('Pulsar-Regular'),
+    url('../fonts/PulsarOriginalRegular/PulsarOriginalRegular.woff') format('woff'),
+    url('../fonts/PulsarOriginalRegular/PulsarOriginalRegular.woff2') format('woff2'),
+    url('../fonts/PulsarOriginalRegular/PulsarOriginalRegular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Aire Exterior';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Aire Exterior'), local('Aire-Exterior'),
+    url('../fonts/AireExterior/AireExterior.woff') format('woff'),
+    url('../fonts/AireExterior/AireExterior.ttf') format('ttf');
+}
+
+/*----------Общие стили----------*/
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #141C24;
+    color: #ABABAB;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: 'Pulsar', sans-serif;
+    font-size: 39px;
+    font-weight: 400;
+
+}
+/*----------Общие стили----------*/
+
+/*----------Секция header----------*/
+header {
+    margin: 45px 0 90px;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    color: #57D6FF;
+    font-size: 24px;
+    font-family: 'Pulsar', sans-serif;
+    padding-left: 17px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.nav-link {
+    display: block;
+    color: #ABABAB;
+    line-height: 180%;
+}
+
+.nav-link:hover,
+.nav-link-active {
+    color: #FFF;
+    font-weight: 400;
+    border-bottom: 1px solid #00C5FF;
+}
+/*----------Секция header----------*/
+
+/*----------Секция upgrade----------*/
+.upgrade .container {
+    background-image: url("../img/stalker.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    border: 1px solid #57D6FF;
+    color: #FFF;
+    text-align: center;
+    padding: 276px 50px;
+    box-shadow: 0 0 29px 15px rgba(87,214,255,0.25);
+}
+
+.upgrade-title {
+    font-size: 48px;
+}
+
+.upgrade-link {
+    margin-top: 97px;
+    display: block;
+    color: #000;
+    background-color: #FFF;
+    padding: 19px 89px;
+    font-family: 'Pulsar', sans-serif;
+    font-size: 24px;
+
+
+}
+
+/*----------Секция upgrade----------*/
+
+
+
+
+
+
+
