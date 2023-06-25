@@ -1,4 +1,6 @@
 /*Подключение шрифтов*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 /*@font-face {*/
 /*    font-family: 'Roboto';*/
 /*    font-style: normal;*/
@@ -6,26 +8,26 @@
 /*    src: url('../fonts/Roboto/Roboto-Light.ttf') format('ttf');*/
 /*}*/
 
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('ttf');
-}
+/*@font-face {*/
+/*    font-family: 'Roboto';*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+/*    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('ttf');*/
+/*}*/
 
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    src: url('../fonts/Roboto/Roboto-Medium.ttf') format('ttf');
-}
+/*@font-face {*/
+/*    font-family: 'Roboto';*/
+/*    font-style: normal;*/
+/*    font-weight: 500;*/
+/*    src: url('../fonts/Roboto/Roboto-Medium.ttf') format('ttf');*/
+/*}*/
 
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/Roboto/Roboto-Bold.ttf') format('ttf');
-}
+/*@font-face {*/
+/*    font-family: 'Roboto';*/
+/*    font-style: normal;*/
+/*    font-weight: 700;*/
+/*    src: url('../fonts/Roboto/Roboto-Bold.ttf') format('ttf');*/
+/*}*/
 
 @font-face {
     font-family: 'Pulsar';
@@ -46,11 +48,25 @@
     url('../fonts/AireExterior/AireExterior.ttf') format('ttf');
 }
 
+/*----------Анимация----------*/
+@keyframes move {
+    0% {
+        bottom: 51px;
+    }
+    50% {
+        bottom: 70px;
+    }
+    100% {
+        bottom: 51px;
+    }
+}
+
 /*----------Общие стили----------*/
 body {
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     background-color: #141C24;
-    color: #ABABAB;
+    color: #FFF;
 }
 
 .container {
@@ -59,12 +75,10 @@ body {
 }
 
 .title {
-    font-family: 'Pulsar', sans-serif;
+    font-family: 'Aire Exterior', sans-serif;
     font-size: 39px;
     font-weight: 400;
-
 }
-/*----------Общие стили----------*/
 
 /*----------Секция header----------*/
 header {
@@ -96,30 +110,65 @@ header {
 }
 
 .nav-link {
-    display: block;
     color: #ABABAB;
     line-height: 180%;
+    transition: all .3s ease;
+    font-weight: 300;
 }
 
 .nav-link:hover,
 .nav-link-active {
     color: #FFF;
-    font-weight: 400;
+    text-shadow: 0 0 .65px #333, 0 0 .65px #333;
     border-bottom: 1px solid #00C5FF;
 }
 /*----------Секция header----------*/
 
 /*----------Секция upgrade----------*/
 .upgrade .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-image: url("../img/stalker.jpg");
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     border-radius: 15px;
     border: 1px solid #57D6FF;
     color: #FFF;
     text-align: center;
-    padding: 276px 50px;
-    box-shadow: 0 0 29px 15px rgba(87,214,255,0.25);
+    padding: 280px 50px 290px;
+    box-shadow: 0 0 29px 15px rgba(87, 214, 255, 0.25);
+    position: relative;
+    z-index: 10;
+}
+
+.upgrade .container:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    border: 0 solid #000;
+    background: rgba(0, 0, 0, 0.40);
+    filter: blur(23px);
+    z-index: 0;
+}
+
+.upgrade-title {
+    font-size: 48px;
+}
+
+.upgrade-text {
+    font-weight: 500;
+}
+
+.upgrade-text,
+.upgrade-title {
+    position: relative;
 }
 
 .upgrade-title {
@@ -127,17 +176,76 @@ header {
 }
 
 .upgrade-link {
+    background-color: #FFF;
+    width: 226px;
+    height: 61px;
     margin-top: 97px;
+    position: relative;
+    margin-right: 25px;
+    transition: all .3s ease;
+}
+
+.upgrade-link:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: -25px;
+    width: 0;
+    height: 0;
+    border-bottom: 25px solid #FFF;
+    border-right: 25px solid transparent;
+    transition: all .3s ease;
+}
+
+.upgrade-link:before {
+    position: absolute;
+    content: '';
+    top: 25px;
+    right: -25px;
+    width: 25px;
+    height: 36px;
+    background-color: #FFF;
+    transition: all .3s ease;
+}
+
+.upgrade-link {
     display: block;
     color: #000;
-    background-color: #FFF;
     padding: 19px 89px;
     font-family: 'Pulsar', sans-serif;
     font-size: 24px;
-
-
 }
 
+.upgrade-link:hover,
+.upgrade-link:hover:before {
+    background-color: #00C5FF;
+}
+
+.upgrade-link:hover:after {
+    border-bottom: 25px solid #00C5FF;
+}
+
+.upgrade-line {
+    position: absolute;
+    content: '';
+    bottom: 51px;
+    left: 50%;
+    width: 1px;
+    height: 132px;
+    padding: 0 50px;
+    transform: translate(-50%);
+}
+
+.upgrade-line:hover {
+    animation: move 2s linear infinite;
+}
+
+.upgrade-line span {
+    display: block;
+    width: 1px;
+    height: 132px;
+    background-color: #8c8c8c;
+}
 /*----------Секция upgrade----------*/
 
 
