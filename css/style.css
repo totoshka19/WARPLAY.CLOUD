@@ -74,6 +74,10 @@ body {
     margin: 0 auto;
 }
 
+.content {
+    margin: 0 57px;
+}
+
 .title {
     font-family: 'Aire Exterior', sans-serif;
     font-size: 39px;
@@ -85,7 +89,7 @@ header {
     margin: 45px 0 90px;
 }
 
-.header .container {
+.header-content {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -125,7 +129,7 @@ header {
 /*----------Секция header----------*/
 
 /*----------Секция upgrade----------*/
-.upgrade .container {
+.upgrade-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,7 +148,7 @@ header {
     z-index: 10;
 }
 
-.upgrade .container:before {
+.upgrade-content:before {
     position: absolute;
     content: '';
     top: 0;
@@ -156,6 +160,10 @@ header {
     background: rgba(0, 0, 0, 0.40);
     filter: blur(23px);
     z-index: 0;
+}
+
+.logo-mobile {
+    display: none;
 }
 
 .upgrade-title {
@@ -237,16 +245,32 @@ header {
 }
 
 .upgrade-line:hover {
-    animation: move 2s linear infinite;
+    animation: move 1.5s linear infinite;
 }
 
 .upgrade-line span {
     display: block;
     width: 1px;
     height: 132px;
-    background-color: #8c8c8c;
+    background-color: #c2c2c2;
 }
 /*----------Секция upgrade----------*/
+
+/*----------Секция menu-mobile----------*/
+.menu-btn {
+    position: absolute;
+    content: '';
+    bottom: 40px;
+    right: 23px;
+    width: 52px;
+    height: 20px;
+    z-index: 20;
+}
+
+.menu-btn span {
+    display: none;
+}
+/*----------Секция menu-mobile----------*/
 
 
 
