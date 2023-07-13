@@ -38,13 +38,30 @@
     .header {
         display: none;
     }
+    .nav {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 2rem;
+    }
+    .nav-list-item {
+        text-align: center;
+        width: 100%;
+    }
+    .nav-link {
+        width: 100%;
+    }
     .upgrade-content {
         justify-content: space-between;
         border-radius: 0 0 15px 15px;
         box-shadow: 0 0 29px 15px rgba(0, 0, 0, 0.25);
         padding: 41px 38px 94px;
         height: 100vh;
-
     }
     .logo-mobile {
         display: flex;
@@ -65,12 +82,11 @@
     .upgrade-line {
         bottom: -66px;
     }
-    .menu-btn span {
+    .menu-btn {
         display: block;
-        width: 100%;
-        height: 5px;
-        background-color: #E0E0E0;
-        margin: 10px 0;
+    }
+    .menu-mobile.open {
+        display: flex;
     }
 }
 

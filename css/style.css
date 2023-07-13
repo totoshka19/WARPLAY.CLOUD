@@ -84,6 +84,16 @@ body {
     font-weight: 400;
 }
 
+.fa-brands {
+    font-size: 40px;
+    color: #ABABAB;
+    transition: all .3s ease;
+}
+
+.fa-brands:hover {
+    color: #57D6FF;
+}
+
 /*----------Секция header----------*/
 header {
     margin: 45px 0 90px;
@@ -127,6 +137,80 @@ header {
     border-bottom: 1px solid #00C5FF;
 }
 /*----------Секция header----------*/
+
+/*----------Секция menu-mobile----------*/
+.menu-btn {
+    overflow-x: hidden;
+
+    display: none;
+    position: absolute;
+    content: '';
+    bottom: 40px;
+    right: 23px;
+    width: 52px;
+    height: 20px;
+    z-index: 20;
+    background: linear-gradient(to bottom, #EAE5E5 25%, transparent 26%, transparent 74%, #EAE5E5 75%);
+}
+
+.active {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, transparent 45%, #EAE5E5 46%, #EAE5E5 55%, transparent 56%),
+    linear-gradient(-45deg, transparent 45%, #EAE5E5 46%, #EAE5E5 55%, transparent 56%);
+}
+
+/*.menu-btn-close {*/
+/*    position: absolute;*/
+/*    content: '';*/
+/*    bottom: 40px;*/
+/*    right: 23px;*/
+/*    width: 52px;*/
+/*    height: 20px;*/
+/*    z-index: 10;*/
+/*}*/
+
+/*.menu-btn span {*/
+/*    display: none;*/
+/*}*/
+
+/*.menu-btn-close span {*/
+/*    display: none;*/
+/*}*/
+
+.menu-mobile {
+    display: none;
+    transform: translateX(150%);
+    transition: transform .3s ease;
+}
+
+.menu-mobile.open {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: #141C24;
+    width: 100%;
+    height: 100vh;
+    z-index: 30;
+    padding: 35px 30px 160px;
+    transform: translateX(0%);
+}
+
+.icons {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #FFF;
+    padding-bottom: 24px;
+}
+/*----------Секция menu-mobile----------*/
 
 /*----------Секция upgrade----------*/
 .upgrade-content {
@@ -256,21 +340,7 @@ header {
 }
 /*----------Секция upgrade----------*/
 
-/*----------Секция menu-mobile----------*/
-.menu-btn {
-    position: absolute;
-    content: '';
-    bottom: 40px;
-    right: 23px;
-    width: 52px;
-    height: 20px;
-    z-index: 20;
-}
 
-.menu-btn span {
-    display: none;
-}
-/*----------Секция menu-mobile----------*/
 
 
 
