@@ -85,6 +85,9 @@
     .menu-btn {
         display: block;
     }
+    .menu-mobile {
+        display: block;
+    }
     .menu-mobile.open {
         display: flex;
     }
