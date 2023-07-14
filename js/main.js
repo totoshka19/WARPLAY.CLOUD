@@ -22,3 +22,4 @@ function removeActiveLink() {
         navLinks[i].classList.remove('nav-link-active');
     }
 }
+
