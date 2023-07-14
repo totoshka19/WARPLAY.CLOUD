@@ -61,7 +61,11 @@
         border-radius: 0 0 15px 15px;
         box-shadow: 0 0 29px 15px rgba(0, 0, 0, 0.25);
         padding: 41px 38px 94px;
+        width: 100%;
         height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
     .logo-mobile {
         display: flex;
@@ -86,7 +90,7 @@
         display: block;
     }
     .menu-mobile {
-        display: block;
+        display: flex;
     }
     .menu-mobile.open {
         display: flex;

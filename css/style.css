@@ -67,6 +67,7 @@ body {
     font-weight: 300;
     background-color: #141C24;
     color: #FFF;
+    overflow-x: hidden;
 }
 
 .container {
@@ -139,6 +140,28 @@ header {
 /*----------Секция header----------*/
 
 /*----------Секция menu-mobile----------*/
+
+.menu-mobile {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #141C24;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 30;
+    padding: 35px 30px 160px;
+    transform: translateX(100%);
+    transition: transform .5s;
+}
+
+.menu-mobile.open {
+    position: fixed;
+    display: none;
+    transform: translateX(0%);
+}
+
 .menu-btn {
     display: none;
     position: absolute;
@@ -151,35 +174,12 @@ header {
     background: linear-gradient(to bottom, #EAE5E5 25%, transparent 26%, transparent 74%, #EAE5E5 75%);
 }
 
-.active {
+.menu-btn.active {
     position: fixed;
     width: 40px;
     height: 40px;
     background: linear-gradient(45deg, transparent 45%, #EAE5E5 46%, #EAE5E5 55%, transparent 56%),
     linear-gradient(-45deg, transparent 45%, #EAE5E5 46%, #EAE5E5 55%, transparent 56%);
-}
-
-.menu-mobile {
-    display: none;
-    position: fixed;
-    transform: translateX(100%);
-    transition: transform .5s ease;
-}
-
-.menu-mobile.open {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    content: '';
-    top: 0;
-    left: 0;
-    background-color: #141C24;
-    width: 100%;
-    height: 100vh;
-    z-index: 30;
-    padding: 35px 30px 160px;
-    transform: translateX(0%);
 }
 
 .icons {
