@@ -282,7 +282,9 @@ header {
 .about {
     margin-bottom: 100px;
 }
+
 .about-content {
+    position: relative;
     margin: 0 auto;
     max-width: 1207px;
     padding-top: 80px;
@@ -290,6 +292,18 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 63px;
+}
+
+.about-content::after {
+    position: absolute;
+    content: '';
+    bottom: -120px;
+    right: -250px;
+    width: 461px;
+    height: 461px;
+    border-radius: 461px;
+    background: rgba(0, 0, 0, 0.25);
+    filter: blur(100px);
 }
 
 .about-block:first-child {
