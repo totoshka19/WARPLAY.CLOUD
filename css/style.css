@@ -34,6 +34,10 @@
 }
 
 /*----------Общие стили----------*/
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -87,7 +91,7 @@ body {
 
 /*----------Секция header----------*/
 header {
-    margin: 45px 0 90px;
+    margin: 40px 0 60px;
 }
 
 .header-content {
@@ -183,6 +187,10 @@ header {
 /*----------Секция menu-mobile----------*/
 
 /*----------Секция upgrade----------*/
+.upgrade {
+    margin: 45px 0 60px;
+}
+
 .upgrade-content {
     display: flex;
     flex-direction: column;
@@ -280,14 +288,13 @@ header {
 
 /*----------Секция about----------*/
 .about {
-    margin-bottom: 100px;
+    margin-bottom: 1000px;
 }
 
 .about-content {
     position: relative;
     margin: 0 auto;
     max-width: 1207px;
-    padding-top: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -344,6 +351,7 @@ header {
 
 .btn-download {
     height: 30px;
+    margin-top: 50px;
     color: #00C5FF;
     border-bottom: 1px solid #00C5FF;
     position: relative;
