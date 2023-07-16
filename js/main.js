@@ -23,3 +23,7 @@ function removeActiveLink() {
     }
 }
 
+// Установка активного тарифа
+
+
+

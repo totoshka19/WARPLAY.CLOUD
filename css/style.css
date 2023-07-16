@@ -288,7 +288,7 @@ header {
 
 /*----------Секция about----------*/
 .about {
-    margin-bottom: 1000px;
+    margin: 45px 0 60px;
 }
 
 .about-content {
@@ -372,6 +372,91 @@ header {
     box-shadow: 2px 2px 10px #00C5FF;
 }
 /*----------Секция about----------*/
+/*----------Секция tariffs----------*/
+.tariffs {
+    margin: 45px 0 60px;
+}
+
+.tariffs-content {
+    margin: 0 auto;
+    max-width: 1220px;
+}
+
+.tariffs-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tariffs-title {
+    padding: 17px 0 80px;
+}
+
+.tariffs-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.tariff-item {
+    border-radius: 5px;
+    background: #1F2631;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 76px 40px 47px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.tariff-item.active {
+    background: #00C5FF;
+}
+
+.tariff-title {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.tariff-title.active,
+.tariff-price.active {
+    color: #141C24;
+}
+
+.tariff-price {
+    padding: 15px 0 22px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.tariff-list {
+    color: #ABABAB;
+    font-size: 22px;
+    line-height: 150%;
+}
+
+.tariff-list.active {
+    color: #000;
+}
+
+.btn-tariff {
+    color: #141C24;
+    font-family: "Aire Exterior", sans-serif;
+    font-size: 24px;
+    border-radius: 5px;
+    background: #00C5FF;
+    width: 100%;
+    padding: 14px;
+}
+
+.btn-tariff.active {
+    color: #F1F8FF;
+    background: #141C24;
+}
+
+
+
+/*----------Секция tariffs----------*/
 
 
 
